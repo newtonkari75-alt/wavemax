@@ -19,6 +19,21 @@
         .fade-out {
             opacity: 0.5;
         }
+        /* Custom scrollbar for modals */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
     </style>
 </head>
 <body class="bg-white font-sans text-gray-900 overflow-x-hidden min-h-screen">
@@ -273,12 +288,12 @@
     <!-- Footer Completo de Acordo com as Políticas do Google -->
     <footer class="bg-[#111827] text-white py-12 text-center text-sm text-gray-400">
         <div class="max-w-5xl mx-auto px-4 flex flex-col items-center gap-6">
-            <!-- Links Legais -->
+            <!-- Links Legais com Modais (Popups) -->
             <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-gray-300 font-semibold text-xs md:text-sm uppercase tracking-wider">
-                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-white transition-colors">Contact Us</a>
-                <a href="#" class="hover:text-white transition-colors">Shipping & Returns</a>
+                <a href="#" onclick="openModal('modal-terms'); return false;" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" onclick="openModal('modal-privacy'); return false;" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" onclick="openModal('modal-contact'); return false;" class="hover:text-white transition-colors">Contact Us</a>
+                <a href="#" onclick="openModal('modal-shipping'); return false;" class="hover:text-white transition-colors">Shipping & Returns</a>
             </div>
             
             <!-- Disclaimer de Distribuidor Autorizado e Políticas -->
@@ -294,6 +309,253 @@
             </div>
         </div>
     </footer>
+
+    <!-- ========================================== -->
+    <!-- MODALS (Popups) CONTAINER                  -->
+    <!-- ========================================== -->
+
+    <!-- Terms of Service Modal -->
+    <div id="modal-terms" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-terms')"></div>
+        <div class="relative bg-white w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl flex flex-col">
+            <!-- Header -->
+            <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900">Terms & Conditions</h2>
+                <button onclick="closeModal('modal-terms')" class="text-gray-500 hover:text-red-600 transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <!-- Content -->
+            <div class="p-5 md:p-8 overflow-y-auto custom-scrollbar text-sm md:text-base text-gray-600 leading-relaxed">
+                <p class="mb-4">Dear valued customer, please read these Terms of Service (hereinafter – “Terms”) carefully before using any feature of https://try-wavemax.com (hereinafter – “Website”) or purchasing any of the products therein.</p>
+                <p class="mb-4">These Terms govern your use of the Website and any of its features, and together with all other terms and policies specified below, it shall form a legally binding agreement between You (hereinafter – “user” or “you”) and us. Please take your time to read these Terms carefully before making any purchase on the Website. If You have not read and/or understood the provisions of these Terms, we recommend that you do not continue to use the Website and contact our customer support, which will be happy to answer your questions.</p>
+                <p class="mb-6">We also advise you to read our FAQ section, which is available on the Website, before purchasing any goods or services on the Website.</p>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Who We Are</h3>
+                <p class="mb-4">WaveMax (hereinafter referred to as the “WaveMax“, “we”, “us”, “our”) is a brand name used and operated by a business entity UAB Rara Digital, which is a limited liability company incorporated in the State Enterprise Register of Lithuania, company No. 306641699, with a registered office address at Gedimino pr., 20, Vilnius, 01103, Lithuania. Whenever you will buying anything on the Website, you will be entering into a contractual relationship with Us, and this contractual relationship shall be bound and determined by these Terms and applicable laws.</p>
+                <p class="mb-4">Please be noted that all purchases that You will make on the Website will be sent to You from one of our fulfillment centers that will have a different address than our correspondence or office address. If you want to contact us or send us anything by post mail, please contact our customer support first, and you will be provided with the address and other contact details.</p>
+                <p class="mb-6">If you have any questions, inquiries, or complaints regarding the Website or our services, You can always contact our customer support at support@try-wavemax.com.</p>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Our Products</h3>
+                <p class="mb-4">The Website is an online store dedicated to selling consumer goods (“Products”). Please be noted that our Products are not suitable for industrial or professional use. We only sell directly to consumers, and we have the right to refuse selling any of our Products to you or limit the total number of Products that you can purchase from us if we have a reason to believe that you are making the purchase with the intention of reselling, leasing or using for other commercial/industrial purposes.</p>
+                <p class="mb-4">Our Products are manufactured in China by licensed manufacturers that comply with all applicable safety and manufacturing standards applicable in the US and EU.</p>
+                <p class="mb-4">Our Products are not toys and should never be given to children. Our Products are not medical devices and are not intended to diagnose, treat, cure, or prevent any disease or condition.</p>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Whom Do We Sell To</h3>
+                <p class="mb-4">Please be noted that our Products are not sold for and cannot be used for commercial use, as we sell our Products for personal use only. The Website’s primary target audience is adult users. We do not encourage or address children or minors to visit our Website or make any purchases therein.</p>
+                <p class="mb-2">We reserve the right to cancel your purchase and reject any payments that you make on the Website if we have a reason to believe that:</p>
+                <ul class="list-disc pl-5 mb-4 space-y-1">
+                    <li>You are buying our Products for industrial or commercial use (including reselling or leasing);</li>
+                    <li>You are younger than 13 years of age and purchasing from the United States of America, Canada, and other countries;</li>
+                    <li>You are younger than 16 years of age and purchasing from any country of the European Union;</li>
+                    <li>You have not read and accepted these Terms.</li>
+                </ul>
+                <p class="mb-2">By agreeing to these Terms and making a purchase on Our Website you confirm to Us, that:</p>
+                <ul class="list-disc pl-5 mb-6 space-y-1">
+                    <li>You are above the legal age applicable in your country for entering into any distant purchase agreement;</li>
+                    <li>Your provided contact, billing, and shipping information is true and correct;</li>
+                    <li>You are paying for the product with the credit card that belongs to you, or the owner of the credit card has authorized you to use the card;</li>
+                    <li>You are purchasing the products for personal use only.</li>
+                </ul>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Returns & Refunds</h3>
+                <p class="mb-4">If you are unhappy with your purchased Products you may return them and get a full refund within 30 days from the delivery date. To exercise the right to withdraw and return your purchased Products, You must contact our support team via support@try-wavemax.com.</p>
+                <p class="mb-4">Please be noted that we will only accept returned Products if it was not used, damaged, and sent back to us in the original package. You will have to cover the shipping costs for returning the Products, and we will not compensate your shipping costs except when you are returning a defective item.</p>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Warranty</h3>
+                <p class="mb-6">All of our Products come with a standard two years warranty. We will replace any item that would turn out to be defective within the warranty term. Please be noted that the warranty shall not apply if we determine that the product was not used as intended or has been mechanically damaged.</p>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Contact Information</h3>
+                <p class="mb-1">Email – support@try-wavemax.com</p>
+                <p class="mb-4">Phone – +1 (989) 499-2235</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="modal-privacy" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-privacy')"></div>
+        <div class="relative bg-white w-full max-w-4xl max-h-[85vh] rounded-2xl shadow-2xl flex flex-col">
+            <!-- Header -->
+            <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900">Privacy Policy</h2>
+                <button onclick="closeModal('modal-privacy')" class="text-gray-500 hover:text-red-600 transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <!-- Content -->
+            <div class="p-5 md:p-8 overflow-y-auto custom-scrollbar text-sm md:text-base text-gray-600 leading-relaxed">
+                <p class="mb-4">Dear valued customer, this Privacy Policy (hereinafter – “Policy”) will answer the most important questions about how we collect, use and store information about you whenever you are visiting https://try-wavemax.com (hereinafter – “Website”) or making a purchase on the Website.</p>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Who Is Responsible For Handling Your Personal Data</h3>
+                <p class="mb-6">WaveMax is a brand name used and operated by a business entity UAB Rara Digital, which is a limited liability company incorporated in the State Enterprise Register of Lithuania, company No. 306641699, with a registered office address at Gedimino pr., 20, Vilnius, 01103, Lithuania. Whenever you will provide any personal information on the Website, we will be responsible for handling and controlling your personal information.</p>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">What Do We Do With Your Information</h3>
+                <ul class="list-disc pl-5 mb-6 space-y-2">
+                    <li>We use your information to process your purchase request and deliver your ordered products;</li>
+                    <li>We may use your information to send you marketing and promotional materials of similar products;</li>
+                    <li>We may use your information to contact you from time to time to inform you about discounts or offers;</li>
+                    <li>We may transfer your personal information to third parties that are our service providers or business partners when that is needed for fulfilling your orders.</li>
+                </ul>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Sharing Your Personal Information</h3>
+                <p class="mb-4">We share your personal information with the following subjects:</p>
+                <ul class="list-disc pl-5 mb-6 space-y-1">
+                    <li>Financial institutions that handle payment processing;</li>
+                    <li>Attorneys, auditors, IT service providers, and other subjects that provide services to the Company;</li>
+                    <li>Courts, law enforcement, and other state institutions, when required by law;</li>
+                    <li>Our shipping services partners to deliver your purchases to you;</li>
+                    <li>Our Website online store management system service provider (Shopify Inc.);</li>
+                    <li>Analytical tools service providers (such as Google Analytics).</li>
+                </ul>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Age Of Consent</h3>
+                <p class="mb-6">By using this site, you represent that you are at least the age of majority in your state or province of residence. We do not process any personal data of minors that are 16 years old or younger.</p>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Cookies</h3>
+                <p class="mb-4">We use Cookies, which are small text files that are stored by your browser on your device when you browse websites. Our website contains cookies specified in the table below:</p>
+                
+                <div class="overflow-x-auto my-6 border border-gray-200 rounded-lg">
+                    <table class="min-w-full text-left text-sm border-collapse">
+                        <thead class="bg-gray-100 text-gray-800">
+                            <tr>
+                                <th class="p-3 border-b border-gray-200 font-bold">Cookie Name</th>
+                                <th class="p-3 border-b border-gray-200 font-bold">Cookie Description</th>
+                                <th class="p-3 border-b border-gray-200 font-bold">Cookie Expiry</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Category -->
+                            <tr><td colspan="3" class="bg-gray-50 font-bold p-3 border-b border-gray-200 text-[#0b3cba]">Strictly Necessary Cookies</td></tr>
+                            <tr>
+                                <td class="p-3 border-b border-gray-200">CookieScriptConsent</td>
+                                <td class="p-3 border-b border-gray-200">Used by Cookie-Script.com to remember visitor cookie consent preferences.</td>
+                                <td class="p-3 border-b border-gray-200">1 month</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border-b border-gray-200">laravel_session</td>
+                                <td class="p-3 border-b border-gray-200">Internally laravel uses laravel_session to identify a session instance.</td>
+                                <td class="p-3 border-b border-gray-200">2 hours</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border-b border-gray-200">__cfruid</td>
+                                <td class="p-3 border-b border-gray-200">Associated with sites using CloudFlare, used to identify trusted web traffic.</td>
+                                <td class="p-3 border-b border-gray-200">Session</td>
+                            </tr>
+                            
+                            <!-- Category -->
+                            <tr><td colspan="3" class="bg-gray-50 font-bold p-3 border-b border-gray-200 text-[#0b3cba]">Functionality Cookies</td></tr>
+                            <tr>
+                                <td class="p-3 border-b border-gray-200">__zlcmid</td>
+                                <td class="p-3 border-b border-gray-200">Live chat widget stores the Zopim Live Chat ID.</td>
+                                <td class="p-3 border-b border-gray-200">1 year</td>
+                            </tr>
+                            
+                            <!-- Category -->
+                            <tr><td colspan="3" class="bg-gray-50 font-bold p-3 border-b border-gray-200 text-[#0b3cba]">Targeting Cookies</td></tr>
+                            <tr>
+                                <td class="p-3">__cfduid</td>
+                                <td class="p-3">Associated with sites using CloudFlare, used to speed up page load times.</td>
+                                <td class="p-3">30 days</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Questions And Contact Information</h3>
+                <p class="mb-4">If you have any questions, inquiries, requests, or complaints regarding our use of your personal information, please contact our customer support at: support@try-wavemax.com; or call us by phone: +1 (989) 499-2235.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Modal -->
+    <div id="modal-contact" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-contact')"></div>
+        <div class="relative bg-white w-full max-w-lg max-h-[85vh] rounded-2xl shadow-2xl flex flex-col">
+            <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900">Contact Us</h2>
+                <button onclick="closeModal('modal-contact')" class="text-gray-500 hover:text-red-600 transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-6 md:p-8 text-center md:text-left text-gray-600">
+                <div class="flex justify-center md:justify-start mb-6 text-[#0b3cba]">
+                    <i data-lucide="headset" class="w-16 h-16"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-gray-900 mb-2">Need Help?</h3>
+                <p class="mb-8">If you have any questions about your order or our products, please don’t hesitate to contact us:</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center justify-center md:justify-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
+                        <i data-lucide="phone" class="w-6 h-6 text-gray-400"></i>
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase">By Phone</p>
+                            <p class="text-lg font-semibold text-gray-900">+1 (989) 499-2235</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-center md:justify-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
+                        <i data-lucide="mail" class="w-6 h-6 text-gray-400"></i>
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase">By Email</p>
+                            <p class="text-lg font-semibold text-gray-900">support@try-wavemax.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center md:justify-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
+                        <i data-lucide="map-pin" class="w-6 h-6 text-gray-400"></i>
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase">Headquarters</p>
+                            <p class="text-sm font-semibold text-gray-900">UAB Rara Digital, Gedimino pr., 20,<br>Vilnius, Lithuania, 01103</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shipping & Returns Modal -->
+    <div id="modal-shipping" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-shipping')"></div>
+        <div class="relative bg-white w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl flex flex-col">
+            <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200">
+                <h2 class="text-xl md:text-2xl font-bold text-gray-900">Shipping & Returns</h2>
+                <button onclick="closeModal('modal-shipping')" class="text-gray-500 hover:text-red-600 transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-5 md:p-8 overflow-y-auto custom-scrollbar text-sm md:text-base text-gray-600 leading-relaxed">
+                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <i data-lucide="truck" class="w-5 h-5 text-[#0b3cba]"></i> Shipping & Delivery
+                </h3>
+                <p class="mb-4">Shipping costs will be calculated at the checkout. We ship Worldwide. In the event that we are unable to deliver an item to you, we will contact you directly and immediately refund you.</p>
+                <p class="mb-4">Most items are dispatched within 12 hours. It will take up to 5-12 business days for the delivery of your order. Please consider any holidays or other force majeure situations that might impact delivery times.</p>
+                <p class="mb-6">It is the responsibility of the buyer to make sure that the shipping address entered is correct. We do our best to speed up processing and shipping time, so there is always a small window to correct an incorrect shipping address (usually around 12 hours).</p>
+
+                <hr class="my-8 border-gray-200">
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <i data-lucide="refresh-ccw" class="w-5 h-5 text-[#0b3cba]"></i> Returns & Refunds
+                </h3>
+                <p class="mb-2 font-bold text-gray-800">Eligible reasons to return the purchase or get a refund:</p>
+                <ul class="list-disc pl-5 mb-6 space-y-1">
+                    <li>The Customer is unsatisfied with the product and 30 calendar days have not yet passed after the delivery;</li>
+                    <li>The Product is broken and the warranty is still valid;</li>
+                    <li>The cancellation was made in 12 hours after the purchase.</li>
+                </ul>
+
+                <p class="mb-2 font-bold text-gray-800">Return process and terms:</p>
+                <p class="mb-4">In order to be eligible for a refund, the customer has to contact the Company via email and return the product within 30 days after the delivery. Returns are time-sensitive. All products must be in the same brand-new state and in the original packaging.</p>
+                
+                <p class="mb-4 font-bold text-red-600">All shipping costs regarding returns, refunds, and or exchanges are the sole responsibility of the customer. The Company does not provide pre-paid return shipping labels.</p>
+                
+                <p class="mb-4">The Company will not take any responsibility for any lost or damaged goods that are being returned. Therefore, for any product valued over $15, the Customer should consider using a trackable shipping service or purchasing shipping insurance.</p>
+
+                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Cancellation Of The Order</h3>
+                <p class="mb-4">The Customer has the right to cancel the order within 12 hours if the order was not shipped prior the cancellation was made. The Customer has to keep in mind that all orders are processed as quickly as possible so cancellations are time-sensitive.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script>
@@ -315,22 +577,18 @@
 
         const mainImageEl = document.getElementById('main-carousel-image');
 
-        // Function to update the UI when image changes
         function updateCarouselUI() {
-            // Update Main Image
             mainImageEl.classList.add('fade-out');
             setTimeout(() => {
                 mainImageEl.src = images[currentIndex];
-                // Update Fallback dynamically
                 mainImageEl.onerror = function() {
                     this.onerror = null;
                     this.src = `https://placehold.co/800x800/e2e8f0/475569?text=WaveMax+Image+${currentIndex + 1}`;
                 };
                 mainImageEl.classList.remove('fade-out');
-            }, 150); // half of CSS transition
+            }, 150); 
         }
 
-        // Navigation Functions
         function nextImage() {
             currentIndex = (currentIndex + 1) % images.length;
             updateCarouselUI();
@@ -343,7 +601,6 @@
             resetInterval();
         }
 
-        // Autoplay Interval Functions
         function startInterval() {
             slideInterval = setInterval(() => {
                 currentIndex = (currentIndex + 1) % images.length;
@@ -356,8 +613,38 @@
             startInterval();
         }
 
-        // Initialize
         startInterval();
+
+        // ==========================================
+        // Modal Logic
+        // ==========================================
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                // Bloqueia o scroll do site no fundo enquanto o popup está aberto
+                document.body.style.overflow = 'hidden'; 
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                // Devolve o scroll natural do site
+                document.body.style.overflow = 'auto'; 
+            }
+        }
+
+        // Fecha os popups se o utilizador pressionar a tecla "Esc"
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                const openModals = document.querySelectorAll('[id^="modal-"]:not(.hidden)');
+                openModals.forEach(modal => closeModal(modal.id));
+            }
+        });
 
     </script>
 </body>
