@@ -6,6 +6,10 @@
     <title>WaveMax - Enjoy Unlimited Entertainment</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/faviconV2.png">
+    
+    <!-- Tracking Script RAADS -->
+    <script src="https://api.raads.com.br/code/8300-68b9216f-c959-4981-94de-6e23cbb8fe40"></script>
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -79,38 +83,71 @@
         </div>
     </header>
 
+    <!-- Mobile Headlines (Visible only on mobile) -->
+    <div class="block lg:hidden max-w-7xl mx-auto px-4 pt-8">
+        <!-- Reviews Badge -->
+        <div class="flex items-center gap-2 mb-3">
+            <div class="flex text-[#ffb800]">
+                <i data-lucide="star" class="w-4 h-4 fill-current stroke-0"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current stroke-0"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current stroke-0"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current stroke-0"></i>
+                <div class="relative">
+                    <i data-lucide="star" class="w-4 h-4 text-gray-300 fill-current stroke-0"></i>
+                    <div class="absolute top-0 left-0 overflow-hidden w-1/2 h-full text-[#ffb800]">
+                        <i data-lucide="star" class="w-4 h-4 fill-current stroke-0"></i>
+                    </div>
+                </div>
+            </div>
+            <span class="text-gray-600 text-[13px] font-semibold">
+                <span class="text-black font-bold">4.7</span> | 8000+ Verified Reviews
+            </span>
+        </div>
+
+        <!-- Headlines -->
+        <h1 class="text-3xl font-extrabold text-[#111827] leading-[1.15] mb-3 tracking-tight">
+            Enjoy Unlimited Entertainment With WaveMax
+        </h1>
+        <p class="text-gray-500 text-base font-medium leading-relaxed">
+            Watch Your Favorite Movies, Sports, TV Shows, News For Free Always
+        </p>
+    </div>
+
     <!-- 4. Main Hero Section -->
-    <main class="max-w-7xl mx-auto px-4 py-10 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+    <main class="max-w-7xl mx-auto px-4 py-6 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         
         <!-- Left Column (Content): Mobile order 2 (bottom), Desktop order 1 (left) -->
         <div class="flex flex-col order-2 lg:order-1 lg:pr-4">
             
-            <!-- Reviews Badge -->
-            <div class="flex items-center gap-2 mb-4">
-                <div class="flex text-[#ffb800]">
-                    <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
-                    <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
-                    <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
-                    <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
-                    <div class="relative">
-                        <i data-lucide="star" class="w-4.5 h-4.5 text-gray-300 fill-current stroke-0"></i>
-                        <div class="absolute top-0 left-0 overflow-hidden w-1/2 h-full text-[#ffb800]">
-                            <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
+            <!-- Desktop Headlines (Visible only on lg screens) -->
+            <div class="hidden lg:block">
+                <!-- Reviews Badge -->
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="flex text-[#ffb800]">
+                        <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
+                        <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
+                        <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
+                        <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
+                        <div class="relative">
+                            <i data-lucide="star" class="w-4.5 h-4.5 text-gray-300 fill-current stroke-0"></i>
+                            <div class="absolute top-0 left-0 overflow-hidden w-1/2 h-full text-[#ffb800]">
+                                <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
+                            </div>
                         </div>
                     </div>
+                    <span class="text-gray-600 text-sm font-semibold">
+                        <span class="text-black font-bold">4.7</span> | 8000+ Verified Reviews
+                    </span>
                 </div>
-                <span class="text-gray-600 text-sm font-semibold">
-                    <span class="text-black font-bold">4.7</span> | 8000+ Verified Reviews
-                </span>
-            </div>
 
-            <!-- Headlines -->
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#111827] leading-[1.15] mb-4 tracking-tight">
-                Enjoy Unlimited Entertainment With WaveMax
-            </h1>
-            <p class="text-gray-500 text-base md:text-lg font-medium mb-6 leading-relaxed">
-                Watch Your Favorite Movies, Sports, TV Shows, News For Free Always
-            </p>
+                <!-- Headlines -->
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#111827] leading-[1.15] mb-4 tracking-tight">
+                    Enjoy Unlimited Entertainment With WaveMax
+                </h1>
+                <p class="text-gray-500 text-base md:text-lg font-medium mb-6 leading-relaxed">
+                    Watch Your Favorite Movies, Sports, TV Shows, News For Free Always
+                </p>
+            </div>
 
             <!-- Social Proof Box -->
             <div class="flex flex-col sm:flex-row sm:items-center justify-between border border-gray-200 rounded-lg p-3 mb-6 gap-4 bg-gray-50/50">
@@ -159,18 +196,15 @@
         <div class="flex gap-3 h-[350px] md:h-[450px] lg:h-[500px] w-full order-1 lg:order-2">
             
             <!-- Main Large Image Container -->
-            <div class="relative flex-1 bg-[#e8ecef] rounded-xl overflow-hidden border border-gray-200 flex flex-col group">
-                <div class="absolute top-0 left-0 w-full bg-[#0b3cba] text-white text-center py-3 md:py-4 font-bold text-xl md:text-3xl shadow-md z-20">
-                    Never Pay for Cable Again
-                </div>
-
-                <!-- Active Image -->
-                <div class="w-full h-full pt-14 bg-white relative">
+            <div class="relative flex-1 bg-white rounded-xl overflow-hidden border border-gray-200 flex flex-col group shadow-sm">
+                
+                <!-- Active Image (No Cropping) -->
+                <div class="w-full h-full p-4 bg-white relative flex items-center justify-center">
                     <img id="main-carousel-image" 
                          src="images/wavemax1 (1).jpg" 
                          onerror="this.onerror=null; this.src='https://placehold.co/800x800/e2e8f0/475569?text=WaveMax+Image+1'"
                          alt="WaveMax Product" 
-                         class="w-full h-full object-cover">
+                         class="w-full h-full object-contain">
                 </div>
 
                 <!-- Carousel Arrows -->
@@ -191,87 +225,87 @@
             <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#111827] mb-4 tracking-tight">Choose Your Country To Continue</h2>
             <p class="text-gray-500 mb-8 text-base md:text-lg font-medium max-w-2xl mx-auto">Select your shipping destination below to secure your WaveMax at the discounted price and ensure local delivery.</p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 max-w-5xl mx-auto">
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 max-w-5xl mx-auto">
                 <!-- US -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44121" class="flex items-center justify-start gap-4 p-4 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/us.png" alt="United States" class="w-14 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44121" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
+                    <img src="https://flagcdn.com/w80/us.png" alt="United States" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-base md:text-lg leading-tight">United States</span>
-                        <span class="text-gray-500 text-[11px] md:text-xs mt-0.5">Exclusive Deal Available</span>
+                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">United States</span>
+                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
                 <!-- UK -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44125" class="flex items-center justify-start gap-4 p-4 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/gb.png" alt="UK" class="w-14 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44125" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
+                    <img src="https://flagcdn.com/w80/gb.png" alt="UK" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-base md:text-lg leading-tight">United Kingdom</span>
-                        <span class="text-gray-500 text-[11px] md:text-xs mt-0.5">Exclusive Deal Available</span>
+                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">United Kingdom</span>
+                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
                 <!-- CA -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44129" class="flex items-center justify-start gap-4 p-4 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada" class="w-14 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44129" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
+                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-base md:text-lg leading-tight">Canada</span>
-                        <span class="text-gray-500 text-[11px] md:text-xs mt-0.5">Exclusive Deal Available</span>
+                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Canada</span>
+                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
                 <!-- AU -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44133" class="flex items-center justify-start gap-4 p-4 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/au.png" alt="Australia" class="w-14 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44133" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
+                    <img src="https://flagcdn.com/w80/au.png" alt="Australia" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-base md:text-lg leading-tight">Australia</span>
-                        <span class="text-gray-500 text-[11px] md:text-xs mt-0.5">Exclusive Deal Available</span>
+                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Australia</span>
+                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
                 <!-- DE -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44141" class="flex items-center justify-start gap-4 p-4 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/de.png" alt="Germany" class="w-14 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44141" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
+                    <img src="https://flagcdn.com/w80/de.png" alt="Germany" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-base md:text-lg leading-tight">Germany</span>
-                        <span class="text-gray-500 text-[11px] md:text-xs mt-0.5">Exclusive Deal Available</span>
+                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Germany</span>
+                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
                 <!-- FR -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44145" class="flex items-center justify-start gap-4 p-4 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/fr.png" alt="France" class="w-14 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44145" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
+                    <img src="https://flagcdn.com/w80/fr.png" alt="France" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-base md:text-lg leading-tight">France</span>
-                        <span class="text-gray-500 text-[11px] md:text-xs mt-0.5">Exclusive Deal Available</span>
+                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">France</span>
+                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
                 <!-- NL -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44149" class="flex items-center justify-start gap-4 p-4 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/nl.png" alt="Netherlands" class="w-14 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44149" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
+                    <img src="https://flagcdn.com/w80/nl.png" alt="Netherlands" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-base md:text-lg leading-tight">Netherlands</span>
-                        <span class="text-gray-500 text-[11px] md:text-xs mt-0.5">Exclusive Deal Available</span>
+                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Netherlands</span>
+                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
 
                 <!-- Europa -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44137" class="flex items-center justify-start gap-4 p-4 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/eu.png" alt="Europa" class="w-14 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44137" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
+                    <img src="https://flagcdn.com/w80/eu.png" alt="Europa" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-base md:text-lg leading-tight">Europa</span>
-                        <span class="text-gray-500 text-[11px] md:text-xs mt-0.5">Exclusive Deal Available</span>
+                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Europa</span>
+                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
 
                 <!-- Global -->
-                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44121" class="flex items-center justify-start gap-4 p-4 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <div class="w-14 md:w-16 h-[38px] md:h-[42px] bg-blue-50 text-[#0b3cba] flex items-center justify-center rounded-[4px] border border-blue-100 group-hover:scale-105 transition-transform duration-300 shrink-0 shadow-sm">
-                        <i data-lucide="globe" class="w-6 h-6 md:w-7 md:h-7 stroke-[2px]"></i>
+                <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44121" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
+                    <div class="w-10 sm:w-12 md:w-16 h-[26px] sm:h-[32px] md:h-[42px] bg-blue-50 text-[#0b3cba] flex items-center justify-center rounded-[4px] border border-blue-100 group-hover:scale-105 transition-transform duration-300 shrink-0 shadow-sm">
+                        <i data-lucide="globe" class="w-5 h-5 md:w-7 md:h-7 stroke-[2px]"></i>
                     </div>
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-base md:text-lg leading-tight">Global</span>
-                        <span class="text-gray-500 text-[11px] md:text-xs mt-0.5">Exclusive Deal Available</span>
+                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Global</span>
+                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
             </div>
