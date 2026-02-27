@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="gl" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WaveMax - Entretemento sen límites</title>
+    <title>WaveMax - Enjoy Unlimited Entertainment</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/faviconV2.png">
     
-    <!-- Script de seguimento RAADS -->
+    <!-- Tracking Script RAADS -->
     <script src="https://api.raads.com.br/code/8300-68b9216f-c959-4981-94de-6e23cbb8fe40"></script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Iconas Lucide -->
+    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        /* Transición suave para a imaxe do carrusel */
         #main-carousel-image {
             transition: opacity 0.3s ease-in-out;
         }
         .fade-out {
             opacity: 0.5;
         }
-        /* Barra de desprazamento personalizada para modais */
         .custom-scrollbar::-webkit-scrollbar {
             width: 8px;
         }
@@ -42,35 +40,35 @@
 </head>
 <body class="bg-white font-sans text-gray-900 overflow-x-hidden min-h-screen">
 
-    <!-- 1. Barra de promoción superior negra -->
-    <div class="bg-black text-white text-[10px] md:text-xs text-center py-2 font-bold tracking-wider uppercase">
-        Oferta especial por tempo limitado | Aforra ata un 65%
+    <!-- 1. Top Black Promo Bar -->
+    <div data-i18n="promo_bar" class="bg-black text-white text-[10px] md:text-xs text-center py-2 font-bold tracking-wider uppercase">
+        Special limited time offer | Save up to 65%
     </div>
 
-    <!-- 2. Barra de información gris -->
+    <!-- 2. Sub-top Grey Info Bar -->
     <div class="bg-[#fcfcfc] border-b border-gray-200 py-2 px-4 hidden md:flex justify-between items-center text-[11px] font-bold text-gray-700 max-w-7xl mx-auto w-full">
         <div class="flex items-center gap-2">
-            <span class="text-sm">🇺🇸</span> A ANTENA DE TV LÍDER
+            <span class="text-sm">🇺🇸</span> <span data-i18n="top_antenna">AMERICA'S #1 LEADING TV ANTENNA</span>
         </div>
         <div class="flex items-center gap-6">
             <span class="flex items-center gap-1.5 uppercase">
-                <i data-lucide="truck" class="w-3.5 h-3.5 text-gray-900"></i> Envío rápido
+                <i data-lucide="truck" class="w-3.5 h-3.5 text-gray-900"></i> <span data-i18n="top_shipping">Fast Shipping</span>
             </span>
             <span class="flex items-center gap-1.5 uppercase">
-                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gray-900"></i> Garantía de 30 días
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gray-900"></i> <span data-i18n="top_guarantee">30-Day Money Back</span>
             </span>
         </div>
     </div>
 
-    <!-- 3. Navegación principal -->
+    <!-- 3. Main Navigation -->
     <header class="border-b border-gray-100 shadow-sm sticky top-0 bg-white z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logotipo -->
+            <!-- Logo -->
             <a href="#" class="flex items-center gap-1.5 text-2xl font-bold text-[#1a2350] tracking-tight">
                 <img src="images/logo-black.svg" alt="WaveMax" class="h-8 object-contain" onerror="this.outerHTML='<span class=\'text-blue-600\'><i data-lucide=\'audio-lines\' class=\'w-7 h-7 stroke-[2.5px]\'></i></span>wavemax'">
             </a>
 
-            <!-- Iconas -->
+            <!-- Icons -->
             <div class="flex items-center gap-5">
                 <a href="#country-selection" class="text-gray-800 hover:text-blue-600 transition-colors">
                     <i data-lucide="shopping-bag" class="w-6 h-6 stroke-[2.5px]"></i>
@@ -82,9 +80,9 @@
         </div>
     </header>
 
-    <!-- Titulares para móbiles (Só visibles en móbiles) -->
+    <!-- Mobile Headlines (Visible only on mobile) -->
     <div class="block lg:hidden max-w-7xl mx-auto px-4 pt-8 text-center">
-        <!-- Distintivo de recensións (Axustado para Google Ads) -->
+        <!-- Reviews Badge -->
         <div class="flex items-center justify-center gap-2 mb-3">
             <div class="flex text-[#ffb800]">
                 <i data-lucide="star" class="w-4 h-4 fill-current stroke-0"></i>
@@ -99,30 +97,30 @@
                 </div>
             </div>
             <span class="text-gray-600 text-[13px] font-semibold">
-                <span class="text-black font-bold">4.7</span> | Miles de clientes satisfeitos
+                <span class="text-black font-bold">4.7</span> | <span data-i18n="reviews">Thousands of satisfied customers</span>
             </span>
         </div>
 
-        <!-- Titulares -->
-        <h1 class="text-3xl font-extrabold text-[#111827] leading-[1.15] mb-3 tracking-tight">
-            Descubre a televisión local con WaveMax
+        <!-- Headlines -->
+        <h1 data-i18n="headline" class="text-3xl font-extrabold text-[#111827] leading-[1.15] mb-3 tracking-tight">
+            Discover local TV with WaveMax
         </h1>
     </div>
 
-    <!-- 4. Sección principal -->
+    <!-- 4. Main Hero Section -->
     <main class="max-w-7xl mx-auto px-4 py-6 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         
-        <!-- Columna esquerda (Contido) -->
+        <!-- Left Column (Content) -->
         <div class="flex flex-col order-2 lg:order-1 lg:pr-4">
             
-            <!-- Subtítulo para móbiles (Aparece despois da foto no telemóvel) -->
-            <p class="text-gray-500 text-base font-medium leading-relaxed mb-6 text-center block lg:hidden">
-                Accede a canles de transmisión locais sen contratos nin cotas mensuais.*
+            <!-- Mobile Subheadline (Appears after photo on mobile) -->
+            <p data-i18n="subheadline" class="text-gray-500 text-base font-medium leading-relaxed mb-6 text-center block lg:hidden">
+                Access local broadcast channels available in your area without contracts or monthly fees.*
             </p>
 
-            <!-- Titulares para escritorio -->
+            <!-- Desktop Headlines -->
             <div class="hidden lg:block text-left">
-                <!-- Distintivo de recensións -->
+                <!-- Reviews Badge -->
                 <div class="flex items-center gap-2 mb-4">
                     <div class="flex text-[#ffb800]">
                         <i data-lucide="star" class="w-4.5 h-4.5 fill-current stroke-0"></i>
@@ -137,83 +135,83 @@
                         </div>
                     </div>
                     <span class="text-gray-600 text-sm font-semibold">
-                        <span class="text-black font-bold">4.7</span> | Miles de clientes satisfeitos
+                        <span class="text-black font-bold">4.7</span> | <span data-i18n="reviews_desk">Thousands of satisfied customers</span>
                     </span>
                 </div>
 
-                <!-- Titulares (Axustados para Google Ads) -->
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#111827] leading-[1.15] mb-4 tracking-tight">
-                    Descubre a televisión local con WaveMax
+                <!-- Headlines -->
+                <h1 data-i18n="headline_desk" class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#111827] leading-[1.15] mb-4 tracking-tight">
+                    Discover local TV with WaveMax
                 </h1>
-                <p class="text-gray-500 text-base md:text-lg font-medium mb-6 leading-relaxed">
-                    Accede a canles de transmisión locais dispoñibles na túa zona sen contratos nin cotas mensuais.*
+                <p data-i18n="subheadline_desk" class="text-gray-500 text-base md:text-lg font-medium mb-6 leading-relaxed">
+                    Access local broadcast channels available in your area without contracts or monthly fees.*
                 </p>
             </div>
 
-            <!-- Caixa de proba social -->
+            <!-- Social Proof Box -->
             <div class="flex flex-col sm:flex-row sm:items-center justify-center lg:justify-between border border-gray-200 rounded-lg p-3 mb-6 gap-4 bg-gray-50/50">
                 <div class="flex items-center justify-center gap-3">
                     <div class="flex -space-x-2">
-                        <img class="w-8 h-8 rounded-full border-2 border-white bg-gray-200" src="https://i.pravatar.cc/100?img=11" alt="Cliente">
-                        <img class="w-8 h-8 rounded-full border-2 border-white bg-gray-200" src="https://i.pravatar.cc/100?img=12" alt="Cliente">
-                        <img class="w-8 h-8 rounded-full border-2 border-white bg-gray-200" src="https://i.pravatar.cc/100?img=13" alt="Cliente">
-                        <img class="w-8 h-8 rounded-full border-2 border-white bg-gray-200" src="https://i.pravatar.cc/100?img=14" alt="Cliente">
+                        <img class="w-8 h-8 rounded-full border-2 border-white bg-gray-200" src="https://i.pravatar.cc/100?img=11" alt="Customer">
+                        <img class="w-8 h-8 rounded-full border-2 border-white bg-gray-200" src="https://i.pravatar.cc/100?img=12" alt="Customer">
+                        <img class="w-8 h-8 rounded-full border-2 border-white bg-gray-200" src="https://i.pravatar.cc/100?img=13" alt="Customer">
+                        <img class="w-8 h-8 rounded-full border-2 border-white bg-gray-200" src="https://i.pravatar.cc/100?img=14" alt="Customer">
                     </div>
-                    <span class="text-sm font-bold text-gray-800">Alta satisfacción</span>
+                    <span data-i18n="satisfaction" class="text-sm font-bold text-gray-800">High Satisfaction</span>
                 </div>
                 <div class="flex items-center justify-center gap-2 text-sm text-[#00a859] font-bold">
                     <span class="w-2.5 h-2.5 rounded-full bg-[#00a859] animate-pulse"></span> 
-                    En stock e listo para enviar
+                    <span data-i18n="stock">In stock and ready to ship</span>
                 </div>
             </div>
 
-            <!-- Botón CTA -->
-            <a href="#country-selection" class="block text-center w-full bg-black text-white font-extrabold text-lg py-4 rounded-[4px] uppercase tracking-wide hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl active:scale-[0.99]">
-                Obter desconto do 65%
+            <!-- CTA Button -->
+            <a href="#country-selection" data-i18n="cta" class="block text-center w-full bg-black text-white font-extrabold text-lg py-4 rounded-[4px] uppercase tracking-wide hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl active:scale-[0.99]">
+                Get 65% Discount
             </a>
             
-            <!-- Google Ads Disclaimer: Obrigatorio para antenas -->
-            <p class="text-[10px] text-gray-400 mt-2 text-center">
-                *A dispoñibilidade e calidade das canles depende da súa localización xeográfica, da topografía e da distancia ás torres de transmisión locais.
+            <!-- Google Ads Disclaimer -->
+            <p data-i18n="disclaimer" class="text-[10px] text-gray-400 mt-2 text-center">
+                *Channel availability and quality depend on your geographic location, topography, and distance from local broadcast towers.
             </p>
 
-            <!-- Fila de garantías de confianza -->
+            <!-- Trust Guarantees Row -->
             <div class="grid grid-cols-4 gap-2 mt-4">
                 <div class="flex flex-col items-center text-center gap-2">
                     <i data-lucide="monitor-play" class="w-5 h-5 text-[#1a2350]"></i>
-                    <span class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase leading-tight">Alta<br>calidade</span>
+                    <span data-i18n="feat_quality" class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase leading-tight">High<br>Quality</span>
                 </div>
                 <div class="flex flex-col items-center text-center gap-2">
                     <i data-lucide="shield-check" class="w-5 h-5 text-[#1a2350]"></i>
-                    <span class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase leading-tight">Alternativa<br>legal</span>
+                    <span data-i18n="feat_legal" class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase leading-tight">Legal<br>Alternative</span>
                 </div>
                 <div class="flex flex-col items-center text-center gap-2">
                     <i data-lucide="circle-dollar-sign" class="w-5 h-5 text-[#1a2350]"></i>
-                    <span class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase leading-tight">Garantía de<br>devolución</span>
+                    <span data-i18n="feat_guarantee" class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase leading-tight">Money-Back<br>Guarantee</span>
                 </div>
                 <div class="flex flex-col items-center text-center gap-2">
                     <i data-lucide="credit-card" class="w-5 h-5 text-[#1a2350]"></i>
-                    <span class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase leading-tight">Sen<br>subscricións</span>
+                    <span data-i18n="feat_subs" class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase leading-tight">No<br>Subscriptions</span>
                 </div>
             </div>
         </div>
 
-        <!-- Columna dereita (Imaxes) -->
+        <!-- Right Column (Images) -->
         <div class="flex gap-3 h-[350px] md:h-[450px] lg:h-[500px] w-full order-1 lg:order-2">
             
-            <!-- Contedor da imaxe principal -->
+            <!-- Main Large Image Container -->
             <div class="relative flex-1 bg-white rounded-xl overflow-hidden border border-gray-200 flex flex-col group shadow-sm">
                 
-                <!-- Imaxe activa -->
+                <!-- Active Image -->
                 <div class="w-full h-full p-4 bg-white relative flex items-center justify-center">
                     <img id="main-carousel-image" 
                          src="images/wavemax1 (1).jpg" 
                          onerror="this.onerror=null; this.src='https://placehold.co/800x800/e2e8f0/475569?text=WaveMax+Image+1'"
-                         alt="Produto WaveMax" 
+                         alt="WaveMax Product" 
                          class="w-full h-full object-contain">
                 </div>
 
-                <!-- Frechas do carrusel -->
+                <!-- Carousel Arrows -->
                 <button onclick="prevImage()" class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white/90 rounded-full flex items-center justify-center shadow-md hover:bg-white text-gray-800 z-40 transition-transform hover:scale-105">
                     <i data-lucide="chevron-left" class="w-5 h-5 stroke-[3px]"></i>
                 </button>
@@ -225,73 +223,73 @@
         </div>
     </main>
 
-    <!-- 5. Sección de selección de país -->
+    <!-- 5. Country Selection Section -->
     <section id="country-selection" class="bg-[#f8fafc] border-t border-gray-200 py-12 lg:py-20">
         <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#111827] mb-4 tracking-tight">Escolle o teu país para continuar</h2>
-            <p class="text-gray-500 mb-8 text-base md:text-lg font-medium max-w-2xl mx-auto">Selecciona o teu destino de envío a continuación para asegurar o teu WaveMax ao prezo rebaixado e garantir a entrega local.</p>
+            <h2 data-i18n="country_title" class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#111827] mb-4 tracking-tight">Choose Your Country To Continue</h2>
+            <p data-i18n="country_sub" class="text-gray-500 mb-8 text-base md:text-lg font-medium max-w-2xl mx-auto">Select your shipping destination below to secure your WaveMax at the discounted price and ensure local delivery.</p>
 
             <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 max-w-5xl mx-auto">
-                <!-- EUA -->
+                <!-- US -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44121" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/us.png" alt="Estados Unidos" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="https://flagcdn.com/w80/us.png" alt="United States" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Estados Unidos</span>
-                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Oferta exclusiva</span>
+                        <span data-i18n="c_us" class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">United States</span>
+                        <span data-i18n="exclusive_deal" class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
-                <!-- Reino Unido -->
+                <!-- UK -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44125" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/gb.png" alt="Reino Unido" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="https://flagcdn.com/w80/gb.png" alt="UK" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Reino Unido</span>
-                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Oferta exclusiva</span>
+                        <span data-i18n="c_uk" class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">United Kingdom</span>
+                        <span data-i18n="exclusive_deal" class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
-                <!-- Canadá -->
+                <!-- CA -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44129" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/ca.png" alt="Canadá" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="https://flagcdn.com/w80/ca.png" alt="Canada" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Canadá</span>
-                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Oferta exclusiva</span>
+                        <span data-i18n="c_ca" class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Canada</span>
+                        <span data-i18n="exclusive_deal" class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
-                <!-- Australia -->
+                <!-- AU -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44133" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
                     <img src="https://flagcdn.com/w80/au.png" alt="Australia" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Australia</span>
-                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Oferta exclusiva</span>
+                        <span data-i18n="c_au" class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Australia</span>
+                        <span data-i18n="exclusive_deal" class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
-                <!-- Alemaña -->
+                <!-- DE -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44141" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/de.png" alt="Alemaña" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="https://flagcdn.com/w80/de.png" alt="Germany" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Alemaña</span>
-                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Oferta exclusiva</span>
+                        <span data-i18n="c_de" class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Germany</span>
+                        <span data-i18n="exclusive_deal" class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
-                <!-- Francia -->
+                <!-- FR -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44145" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/fr.png" alt="Francia" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="https://flagcdn.com/w80/fr.png" alt="France" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Francia</span>
-                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Oferta exclusiva</span>
+                        <span data-i18n="c_fr" class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">France</span>
+                        <span data-i18n="exclusive_deal" class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
                 
-                <!-- Países Baixos -->
+                <!-- NL -->
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44149" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
-                    <img src="https://flagcdn.com/w80/nl.png" alt="Países Baixos" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="https://flagcdn.com/w80/nl.png" alt="Netherlands" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Países Baixos</span>
-                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Oferta exclusiva</span>
+                        <span data-i18n="c_nl" class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Netherlands</span>
+                        <span data-i18n="exclusive_deal" class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
 
@@ -299,8 +297,8 @@
                 <a href="https://www.fasttrack37.com/PM7HK3TH/2PMW9KF9/?uid=44137" class="flex items-center justify-start gap-2.5 md:gap-4 p-2.5 md:p-5 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md hover:border-[#0b3cba] transition-all group duration-300">
                     <img src="https://flagcdn.com/w80/eu.png" alt="Europa" class="w-10 sm:w-12 md:w-16 shadow-sm border border-gray-100 rounded-[4px] group-hover:scale-105 transition-transform duration-300 shrink-0">
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Europa</span>
-                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Oferta exclusiva</span>
+                        <span data-i18n="c_eu" class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Europe (EU)</span>
+                        <span data-i18n="exclusive_deal" class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
 
@@ -310,55 +308,55 @@
                         <i data-lucide="globe" class="w-5 h-5 md:w-7 md:h-7 stroke-[2px]"></i>
                     </div>
                     <div class="flex flex-col text-left">
-                        <span class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Global</span>
-                        <span class="text-gray-500 text-[9px] md:text-xs mt-0.5">Oferta exclusiva</span>
+                        <span data-i18n="c_gl" class="font-extrabold text-gray-900 text-[12px] sm:text-sm md:text-lg leading-tight">Global</span>
+                        <span data-i18n="exclusive_deal" class="text-gray-500 text-[9px] md:text-xs mt-0.5">Exclusive Deal Available</span>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Pé de páxina que cumpre coas políticas de Google -->
+    <!-- Footer -->
     <footer class="bg-[#111827] text-white py-10 lg:py-12 text-center text-sm text-gray-400">
         <div class="max-w-5xl mx-auto px-4 flex flex-col items-center gap-6">
-            <!-- Ligazóns legais (Modais) -->
+            <!-- Modal Links -->
             <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-gray-300 font-semibold text-xs md:text-sm uppercase tracking-wider">
-                <a href="#" onclick="openModal('modal-terms'); return false;" class="hover:text-white transition-colors">Termos de Servizo</a>
-                <a href="#" onclick="openModal('modal-privacy'); return false;" class="hover:text-white transition-colors">Política de Privacidade</a>
-                <a href="#" onclick="openModal('modal-contact'); return false;" class="hover:text-white transition-colors">Contacte Connosco</a>
-                <a href="#" onclick="openModal('modal-shipping'); return false;" class="hover:text-white transition-colors">Envío e Devolucións</a>
+                <a href="#" onclick="openModal('modal-terms'); return false;" data-i18n="foot_terms" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" onclick="openModal('modal-privacy'); return false;" data-i18n="foot_privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" onclick="openModal('modal-contact'); return false;" data-i18n="foot_contact" class="hover:text-white transition-colors">Contact Us</a>
+                <a href="#" onclick="openModal('modal-shipping'); return false;" data-i18n="foot_shipping" class="hover:text-white transition-colors">Shipping & Returns</a>
             </div>
             
-            <!-- Aviso do distribuidor e políticas -->
+            <!-- Disclaimer -->
             <div class="max-w-3xl text-[11px] md:text-xs text-gray-500 leading-relaxed space-y-3 mt-4">
-                <p class="font-bold text-gray-400 uppercase tracking-widest text-[10px]">Distribuidor autorizado de WaveMax</p>
-                <p>Somos un distribuidor autorizado dos produtos WaveMax. Todas as marcas comerciais, logotipos e nomes de marcas son propiedade dos seus respectivos propietarios. O seu uso non implica ningunha afiliación ou aval por parte deles.</p>
-                <p>Este sitio web non está afiliado, nin avalado nin patrocinado por Google, Meta ou calquera das súas redes de socios. Para o servizo de atención ao cliente, póñase en contacto connosco a través da páxina Contacte Connosco.</p>
+                <p data-i18n="foot_dist" class="font-bold text-gray-400 uppercase tracking-widest text-[10px]">Authorized WaveMax Distributor</p>
+                <p data-i18n="foot_legal1">We are an authorized distributor of WaveMax products. All trademarks, logos, and brand names are the property of their respective owners. Use of them does not imply any affiliation with or endorsement by them.</p>
+                <p data-i18n="foot_legal2">This website is not affiliated with, endorsed, or sponsored by Google, Meta, or any of their partner networks. For customer service, please reach out to us via the Contact Us page.</p>
             </div>
 
             <!-- Copyright -->
             <div class="mt-4 pt-6 border-t border-gray-800 w-full">
-                <p>&copy; 2024 WaveMax Authorized Store. Todos os dereitos reservados.</p>
+                <p data-i18n="foot_copy">&copy; 2024 WaveMax Authorized Store. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- ========================================== -->
-    <!-- CONTEDOR DE MODAIS (Popups)                -->
+    <!-- MODALS CONTAINER                           -->
     <!-- ========================================== -->
 
-    <!-- Modal Termos de Servizo -->
+    <!-- Terms Modal -->
     <div id="modal-terms" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-terms')"></div>
         <div class="relative bg-white w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl flex flex-col">
             <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900">Terms & Conditions</h2>
+                <h2 data-i18n="foot_terms" class="text-xl md:text-2xl font-bold text-gray-900">Terms & Conditions</h2>
                 <button onclick="closeModal('modal-terms')" class="text-gray-500 hover:text-red-600 transition-colors">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
             <div class="p-5 md:p-8 overflow-y-auto custom-scrollbar text-sm md:text-base text-gray-600 leading-relaxed">
-                <!-- Mantemos os textos legais orixinais para preservar a súa validez xurídica -->
+                <!-- Legal texts remain in English for policy/legal safety -->
                 <p class="mb-4">Dear valued customer, please read these Terms of Service (hereinafter – “Terms”) carefully before using any feature of https://try-wavemax.com (hereinafter – “Website”) or purchasing any of the products therein.</p>
                 <p class="mb-4">These Terms govern your use of the Website and any of its features, and together with all other terms and policies specified below, it shall form a legally binding agreement between You (hereinafter – “user” or “you”) and us. Please take your time to read these Terms carefully before making any purchase on the Website. If You have not read and/or understood the provisions of these Terms, we recommend that you do not continue to use the Website and contact our customer support, which will be happy to answer your questions.</p>
                 <p class="mb-6">We also advise you to read our FAQ section, which is available on the Website, before purchasing any goods or services on the Website.</p>
@@ -404,12 +402,12 @@
         </div>
     </div>
 
-    <!-- Modal Política de Privacidade -->
+    <!-- Privacy Modal -->
     <div id="modal-privacy" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-privacy')"></div>
         <div class="relative bg-white w-full max-w-4xl max-h-[85vh] rounded-2xl shadow-2xl flex flex-col">
             <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900">Privacy Policy</h2>
+                <h2 data-i18n="foot_privacy" class="text-xl md:text-2xl font-bold text-gray-900">Privacy Policy</h2>
                 <button onclick="closeModal('modal-privacy')" class="text-gray-500 hover:text-red-600 transition-colors">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
@@ -493,12 +491,12 @@
         </div>
     </div>
 
-    <!-- Modal de Contacto -->
+    <!-- Contact Modal -->
     <div id="modal-contact" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-contact')"></div>
         <div class="relative bg-white w-full max-w-lg max-h-[85vh] rounded-2xl shadow-2xl flex flex-col">
             <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900">Contact Us</h2>
+                <h2 data-i18n="foot_contact" class="text-xl md:text-2xl font-bold text-gray-900">Contact Us</h2>
                 <button onclick="closeModal('modal-contact')" class="text-gray-500 hover:text-red-600 transition-colors">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
@@ -507,14 +505,14 @@
                 <div class="flex justify-center md:justify-start mb-6 text-[#0b3cba]">
                     <i data-lucide="headset" class="w-16 h-16"></i>
                 </div>
-                <h3 class="text-2xl font-extrabold text-gray-900 mb-2">Need Help?</h3>
-                <p class="mb-8">If you have any questions about your order or our products, please don’t hesitate to contact us:</p>
+                <h3 data-i18n="contact_h" class="text-2xl font-extrabold text-gray-900 mb-2">Need Help?</h3>
+                <p data-i18n="contact_p" class="mb-8">If you have any questions about your order or our products, please don’t hesitate to contact us:</p>
                 
                 <div class="space-y-4">
                     <div class="flex items-center justify-center md:justify-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
                         <i data-lucide="phone" class="w-6 h-6 text-gray-400"></i>
                         <div>
-                            <p class="text-xs text-gray-500 font-bold uppercase">By Phone</p>
+                            <p data-i18n="c_phone" class="text-xs text-gray-500 font-bold uppercase">By Phone</p>
                             <p class="text-lg font-semibold text-gray-900">+1 (989) 499-2235</p>
                         </div>
                     </div>
@@ -522,7 +520,7 @@
                     <div class="flex items-center justify-center md:justify-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
                         <i data-lucide="mail" class="w-6 h-6 text-gray-400"></i>
                         <div>
-                            <p class="text-xs text-gray-500 font-bold uppercase">By Email</p>
+                            <p data-i18n="c_email" class="text-xs text-gray-500 font-bold uppercase">By Email</p>
                             <p class="text-lg font-semibold text-gray-900">support@try-wavemax.com</p>
                         </div>
                     </div>
@@ -530,7 +528,7 @@
                     <div class="flex items-center justify-center md:justify-start gap-4 p-4 bg-gray-50 rounded-lg border border-gray-100">
                         <i data-lucide="map-pin" class="w-6 h-6 text-gray-400"></i>
                         <div>
-                            <p class="text-xs text-gray-500 font-bold uppercase">Headquarters</p>
+                            <p data-i18n="c_hq" class="text-xs text-gray-500 font-bold uppercase">Headquarters</p>
                             <p class="text-sm font-semibold text-gray-900">UAB Rara Digital, Gedimino pr., 20,<br>Vilnius, Lithuania, 01103</p>
                         </div>
                     </div>
@@ -539,55 +537,260 @@
         </div>
     </div>
 
-    <!-- Modal de Envío e Devolucións -->
+    <!-- Shipping Modal -->
     <div id="modal-shipping" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
         <div class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal('modal-shipping')"></div>
         <div class="relative bg-white w-full max-w-3xl max-h-[85vh] rounded-2xl shadow-2xl flex flex-col">
             <div class="flex justify-between items-center p-5 md:p-6 border-b border-gray-200">
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900">Shipping & Returns</h2>
+                <h2 data-i18n="foot_shipping" class="text-xl md:text-2xl font-bold text-gray-900">Shipping & Returns</h2>
                 <button onclick="closeModal('modal-shipping')" class="text-gray-500 hover:text-red-600 transition-colors">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
             <div class="p-5 md:p-8 overflow-y-auto custom-scrollbar text-sm md:text-base text-gray-600 leading-relaxed">
                 <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <i data-lucide="truck" class="w-5 h-5 text-[#0b3cba]"></i> Shipping & Delivery
+                    <i data-lucide="truck" class="w-5 h-5 text-[#0b3cba]"></i> <span data-i18n="ship_title1">Shipping & Delivery</span>
                 </h3>
-                <p class="mb-4">Shipping costs will be calculated at the checkout. We ship Worldwide. In the event that we are unable to deliver an item to you, we will contact you directly and immediately refund you.</p>
-                <p class="mb-4">Most items are dispatched within 12 hours. It will take up to 5-12 business days for the delivery of your order. Please consider any holidays or other force majeure situations that might impact delivery times.</p>
-                <p class="mb-6">It is the responsibility of the buyer to make sure that the shipping address entered is correct. We do our best to speed up processing and shipping time, so there is always a small window to correct an incorrect shipping address (usually around 12 hours).</p>
+                <p data-i18n="ship_p1" class="mb-4">Shipping costs will be calculated at the checkout. We ship Worldwide. In the event that we are unable to deliver an item to you, we will contact you directly and immediately refund you.</p>
+                <p data-i18n="ship_p2" class="mb-4">Most items are dispatched within 12 hours. It will take up to 5-12 business days for the delivery of your order. Please consider any holidays or other force majeure situations that might impact delivery times.</p>
+                <p data-i18n="ship_p3" class="mb-6">It is the responsibility of the buyer to make sure that the shipping address entered is correct. We do our best to speed up processing and shipping time, so there is always a small window to correct an incorrect shipping address (usually around 12 hours).</p>
 
                 <hr class="my-8 border-gray-200">
 
                 <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <i data-lucide="refresh-ccw" class="w-5 h-5 text-[#0b3cba]"></i> Returns & Refunds
+                    <i data-lucide="refresh-ccw" class="w-5 h-5 text-[#0b3cba]"></i> <span data-i18n="ship_title2">Returns & Refunds</span>
                 </h3>
-                <p class="mb-2 font-bold text-gray-800">Eligible reasons to return the purchase or get a refund:</p>
+                <p data-i18n="ship_p4" class="mb-2 font-bold text-gray-800">Eligible reasons to return the purchase or get a refund:</p>
                 <ul class="list-disc pl-5 mb-6 space-y-1">
-                    <li>The Customer is unsatisfied with the product and 30 calendar days have not yet passed after the delivery;</li>
-                    <li>The Product is broken and the warranty is still valid;</li>
-                    <li>The cancellation was made in 12 hours after the purchase.</li>
+                    <li data-i18n="ship_li1">The Customer is unsatisfied with the product and 30 calendar days have not yet passed after the delivery;</li>
+                    <li data-i18n="ship_li2">The Product is broken and the warranty is still valid;</li>
+                    <li data-i18n="ship_li3">The cancellation was made in 12 hours after the purchase.</li>
                 </ul>
 
-                <p class="mb-2 font-bold text-gray-800">Return process and terms:</p>
-                <p class="mb-4">In order to be eligible for a refund, the customer has to contact the Company via email and return the product within 30 days after the delivery. Returns are time-sensitive. All products must be in the same brand-new state and in the original packaging.</p>
+                <p data-i18n="ship_p5" class="mb-2 font-bold text-gray-800">Return process and terms:</p>
+                <p data-i18n="ship_p6" class="mb-4">In order to be eligible for a refund, the customer has to contact the Company via email and return the product within 30 days after the delivery. Returns are time-sensitive. All products must be in the same brand-new state and in the original packaging.</p>
                 
-                <p class="mb-4 font-bold text-red-600">All shipping costs regarding returns, refunds, and or exchanges are the sole responsibility of the customer. The Company does not provide pre-paid return shipping labels.</p>
+                <p data-i18n="ship_p7" class="mb-4 font-bold text-red-600">All shipping costs regarding returns, refunds, and or exchanges are the sole responsibility of the customer. The Company does not provide pre-paid return shipping labels.</p>
                 
-                <p class="mb-4">The Company will not take any responsibility for any lost or damaged goods that are being returned. Therefore, for any product valued over $15, the Customer should consider using a trackable shipping service or purchasing shipping insurance.</p>
+                <p data-i18n="ship_p8" class="mb-4">The Company will not take any responsibility for any lost or damaged goods that are being returned. Therefore, for any product valued over $15, the Customer should consider using a trackable shipping service or purchasing shipping insurance.</p>
 
-                <h3 class="text-lg font-bold text-gray-900 mt-6 mb-3">Cancellation Of The Order</h3>
-                <p class="mb-4">The Customer has the right to cancel the order within 12 hours if the order was not shipped prior the cancellation was made. The Customer has to keep in mind that all orders are processed as quickly as possible so cancellations are time-sensitive.</p>
+                <h3 data-i18n="ship_title3" class="text-lg font-bold text-gray-900 mt-6 mb-3">Cancellation Of The Order</h3>
+                <p data-i18n="ship_p9" class="mb-4">The Customer has the right to cancel the order within 12 hours if the order was not shipped prior the cancellation was made. The Customer has to keep in mind that all orders are processed as quickly as possible so cancellations are time-sensitive.</p>
             </div>
         </div>
     </div>
 
     <!-- Scripts -->
     <script>
-        // Inicializar Iconas
+        // Initialize Icons
         lucide.createIcons();
 
-        // Configuración do carrusel
+        // ==========================================
+        // i18n Auto-Translation System
+        // ==========================================
+        const translations = {
+            'de': {
+                'promo_bar': 'Sonderangebot für kurze Zeit | Sparen Sie bis zu 65%',
+                'top_antenna': 'DIE #1 TV-ANTENNE',
+                'top_shipping': 'Schneller Versand',
+                'top_guarantee': '30-Tage Geld-zurück',
+                'reviews': 'Tausende von zufriedenen Kunden',
+                'reviews_desk': 'Tausende von zufriedenen Kunden',
+                'headline': 'Entdecken Sie lokales Fernsehen mit WaveMax',
+                'headline_desk': 'Entdecken Sie lokales Fernsehen mit WaveMax',
+                'subheadline': 'Greifen Sie auf lokale Sender in Ihrer Umgebung zu, ohne Verträge oder monatliche Gebühren.*',
+                'subheadline_desk': 'Greifen Sie auf lokale Sender in Ihrer Umgebung zu, ohne Verträge oder monatliche Gebühren.*',
+                'satisfaction': 'Hohe Zufriedenheit',
+                'stock': 'Auf Lager und versandbereit',
+                'cta': '65% Rabatt sichern',
+                'disclaimer': '*Verfügbarkeit und Qualität der Sender hängen von Ihrem Standort, der Topografie und der Entfernung zu den Sendemasten ab.',
+                'feat_quality': 'Hohe<br>Qualität',
+                'feat_legal': 'Legale<br>Alternative',
+                'feat_guarantee': 'Geld-zurück<br>Garantie',
+                'feat_subs': 'Keine<br>Abonnements',
+                'country_title': 'Wählen Sie Ihr Land, um fortzufahren',
+                'country_sub': 'Wählen Sie unten Ihr Lieferziel, um sich WaveMax zum reduzierten Preis zu sichern und eine lokale Lieferung zu gewährleisten.',
+                'c_us': 'Vereinigte Staaten',
+                'c_uk': 'Vereinigtes Königreich',
+                'c_ca': 'Kanada',
+                'c_au': 'Australien',
+                'c_de': 'Deutschland',
+                'c_fr': 'Frankreich',
+                'c_nl': 'Niederlande',
+                'c_eu': 'Europa (EU)',
+                'c_gl': 'Weltweit',
+                'exclusive_deal': 'Exklusives Angebot verfügbar',
+                'foot_terms': 'Nutzungsbedingungen',
+                'foot_privacy': 'Datenschutzrichtlinie',
+                'foot_contact': 'Kontakt',
+                'foot_shipping': 'Versand & Rückgabe',
+                'foot_dist': 'Autorisierter WaveMax-Händler',
+                'foot_legal1': 'Wir sind ein autorisierter Händler von WaveMax-Produkten. Alle Marken und Logos sind Eigentum ihrer jeweiligen Inhaber.',
+                'foot_legal2': 'Diese Website ist nicht mit Google oder Meta verbunden oder von diesen gesponsert.',
+                'foot_copy': '© 2024 WaveMax Authorized Store. Alle Rechte vorbehalten.',
+                'contact_h': 'Brauchen Sie Hilfe?',
+                'contact_p': 'Wenn Sie Fragen zu Ihrer Bestellung haben, kontaktieren Sie uns bitte:',
+                'c_phone': 'Telefon',
+                'c_email': 'E-Mail',
+                'c_hq': 'Hauptsitz',
+                'ship_title1': 'Versand & Lieferung',
+                'ship_p1': 'Die Versandkosten werden an der Kasse berechnet. Wir versenden weltweit.',
+                'ship_p2': 'Die meisten Artikel werden innerhalb von 12 Stunden versandt. Die Lieferung dauert 5-12 Werktage.',
+                'ship_p3': 'Es liegt in der Verantwortung des Käufers sicherzustellen, dass die Lieferadresse korrekt ist.',
+                'ship_title2': 'Rückgabe & Rückerstattung',
+                'ship_p4': 'Berechtigte Gründe für eine Rückgabe:',
+                'ship_li1': 'Der Kunde ist mit dem Produkt unzufrieden (innerhalb von 30 Tagen).',
+                'ship_li2': 'Das Produkt ist defekt und die Garantie ist gültig.',
+                'ship_li3': 'Die Stornierung erfolgte innerhalb von 12 Stunden.',
+                'ship_p5': 'Rückgabeprozess:',
+                'ship_p6': 'Kontaktieren Sie uns per E-Mail, um das Produkt innerhalb von 30 Tagen zurückzusenden.',
+                'ship_p7': 'Alle Versandkosten für Rückgaben trägt der Kunde.',
+                'ship_p8': 'Das Unternehmen haftet nicht für verlorene Rücksendungen.',
+                'ship_title3': 'Stornierung der Bestellung',
+                'ship_p9': 'Der Kunde hat das Recht, die Bestellung innerhalb von 12 Stunden zu stornieren.'
+            },
+            'fr': {
+                'promo_bar': 'Offre spéciale durée limitée | Économisez jusqu\'à 65 %',
+                'top_antenna': 'L\'ANTENNE TV N°1',
+                'top_shipping': 'Livraison Rapide',
+                'top_guarantee': 'Garantie 30 Jours',
+                'reviews': 'Des milliers de clients satisfaits',
+                'reviews_desk': 'Des milliers de clients satisfaits',
+                'headline': 'Découvrez la télévision locale avec WaveMax',
+                'headline_desk': 'Découvrez la télévision locale avec WaveMax',
+                'subheadline': 'Accédez aux chaînes locales disponibles dans votre région sans contrat ni frais mensuels.*',
+                'subheadline_desk': 'Accédez aux chaînes locales disponibles dans votre région sans contrat ni frais mensuels.*',
+                'satisfaction': 'Haute Satisfaction',
+                'stock': 'En stock et prêt à expédier',
+                'cta': 'Obtenir 65% de réduction',
+                'disclaimer': '*La disponibilité et la qualité des chaînes dépendent de votre zone géographique, de la topographie et de la distance aux tours de diffusion.',
+                'feat_quality': 'Haute<br>Qualité',
+                'feat_legal': 'Alternative<br>Légale',
+                'feat_guarantee': 'Garantie de<br>Remboursement',
+                'feat_subs': 'Sans<br>Abonnement',
+                'country_title': 'Choisissez votre pays pour continuer',
+                'country_sub': 'Sélectionnez votre destination de livraison ci-dessous pour sécuriser WaveMax au prix réduit.',
+                'c_us': 'États-Unis',
+                'c_uk': 'Royaume-Uni',
+                'c_ca': 'Canada',
+                'c_au': 'Australie',
+                'c_de': 'Allemagne',
+                'c_fr': 'France',
+                'c_nl': 'Pays-Bas',
+                'c_eu': 'Europe (UE)',
+                'c_gl': 'Monde',
+                'exclusive_deal': 'Offre exclusive disponible',
+                'foot_terms': 'Conditions d\'utilisation',
+                'foot_privacy': 'Politique de confidentialité',
+                'foot_contact': 'Nous Contacter',
+                'foot_shipping': 'Expédition et Retours',
+                'foot_dist': 'Distributeur WaveMax Autorisé',
+                'foot_legal1': 'Nous sommes un distributeur autorisé des produits WaveMax. Toutes les marques appartiennent à leurs propriétaires respectifs.',
+                'foot_legal2': 'Ce site n\'est pas affilié, approuvé ou sponsorisé par Google ou Meta.',
+                'foot_copy': '© 2024 WaveMax Authorized Store. Tous droits réservés.',
+                'contact_h': 'Besoin d\'aide ?',
+                'contact_p': 'Si vous avez des questions sur votre commande, veuillez nous contacter :',
+                'c_phone': 'Par Téléphone',
+                'c_email': 'Par Email',
+                'c_hq': 'Siège Social',
+                'ship_title1': 'Expédition & Livraison',
+                'ship_p1': 'Les frais d\'expédition seront calculés lors du paiement. Nous expédions dans le monde entier.',
+                'ship_p2': 'La plupart des articles sont expédiés sous 12 heures. La livraison prend 5 à 12 jours.',
+                'ship_p3': 'Il incombe à l\'acheteur de s\'assurer que l\'adresse d\'expédition est correcte.',
+                'ship_title2': 'Retours & Remboursements',
+                'ship_p4': 'Raisons éligibles pour un retour :',
+                'ship_li1': 'Le client n\'est pas satisfait du produit (dans les 30 jours).',
+                'ship_li2': 'Le produit est cassé et la garantie est valide.',
+                'ship_li3': 'L\'annulation a été effectuée dans les 12 heures.',
+                'ship_p5': 'Processus de retour :',
+                'ship_p6': 'Contactez-nous par email pour retourner le produit dans les 30 jours.',
+                'ship_p7': 'Les frais d\'expédition pour les retours sont à la charge du client.',
+                'ship_p8': 'L\'entreprise n\'est pas responsable des retours perdus.',
+                'ship_title3': 'Annulation de la commande',
+                'ship_p9': 'Le client a le droit d\'annuler la commande dans les 12 heures.'
+            },
+            'nl': {
+                'promo_bar': 'Speciale tijdelijke aanbieding | Bespaar tot 65%',
+                'top_antenna': 'DE #1 TV-ANTENNE',
+                'top_shipping': 'Snelle Verzending',
+                'top_guarantee': '30-Dagen Geld-Terug',
+                'reviews': 'Duizenden tevreden klanten',
+                'reviews_desk': 'Duizenden tevreden klanten',
+                'headline': 'Ontdek lokale tv met WaveMax',
+                'headline_desk': 'Ontdek lokale tv met WaveMax',
+                'subheadline': 'Krijg toegang tot lokale zenders in uw regio zonder contracten of maandelijkse kosten.*',
+                'subheadline_desk': 'Krijg toegang tot lokale zenders in uw regio zonder contracten of maandelijkse kosten.*',
+                'satisfaction': 'Hoge Klanttevredenheid',
+                'stock': 'Op voorraad en klaar voor verzending',
+                'cta': 'Krijg 65% Korting',
+                'disclaimer': '*Beschikbaarheid en kwaliteit van zenders zijn afhankelijk van uw geografische locatie en afstand tot zendmasten.',
+                'feat_quality': 'Hoge<br>Kwaliteit',
+                'feat_legal': 'Legaal<br>Alternatief',
+                'feat_guarantee': 'Geld-Terug<br>Garantie',
+                'feat_subs': 'Geen<br>Abonnementen',
+                'country_title': 'Kies uw land om door te gaan',
+                'country_sub': 'Selecteer hieronder uw verzendbestemming om uw WaveMax tegen de gereduceerde prijs veilig te stellen.',
+                'c_us': 'Verenigde Staten',
+                'c_uk': 'Verenigd Koninkrijk',
+                'c_ca': 'Canada',
+                'c_au': 'Australië',
+                'c_de': 'Duitsland',
+                'c_fr': 'Frankrijk',
+                'c_nl': 'Nederland',
+                'c_eu': 'Europa (EU)',
+                'c_gl': 'Wereldwijd',
+                'exclusive_deal': 'Exclusieve aanbieding beschikbaar',
+                'foot_terms': 'Servicevoorwaarden',
+                'foot_privacy': 'Privacybeleid',
+                'foot_contact': 'Neem Contact Op',
+                'foot_shipping': 'Verzending & Retourneren',
+                'foot_dist': 'Geautoriseerde WaveMax Distributeur',
+                'foot_legal1': 'Wij zijn een geautoriseerde distributeur. Alle handelsmerken zijn eigendom van hun respectievelijke eigenaren.',
+                'foot_legal2': 'Deze website is niet gelieerd aan of gesponsord door Google of Meta.',
+                'foot_copy': '© 2024 WaveMax Authorized Store. Alle rechten voorbehouden.',
+                'contact_h': 'Hulp Nodig?',
+                'contact_p': 'Als u vragen heeft over uw bestelling, neem dan contact met ons op:',
+                'c_phone': 'Telefoon',
+                'c_email': 'E-mail',
+                'c_hq': 'Hoofdkwartier',
+                'ship_title1': 'Verzending & Levering',
+                'ship_p1': 'Verzendkosten worden berekend bij het afrekenen. Wij verzenden wereldwijd.',
+                'ship_p2': 'De meeste artikelen worden binnen 12 uur verzonden. Levering duurt 5-12 dagen.',
+                'ship_p3': 'Het is de verantwoordelijkheid van de koper om te zorgen voor een correct verzendadres.',
+                'ship_title2': 'Retourneren & Terugbetalingen',
+                'ship_p4': 'Geldige redenen voor retournering:',
+                'ship_li1': 'De klant is ontevreden over het product (binnen 30 dagen).',
+                'ship_li2': 'Het product is defect en de garantie is geldig.',
+                'ship_li3': 'De annulering is binnen 12 uur gedaan.',
+                'ship_p5': 'Retourproces:',
+                'ship_p6': 'Neem per e-mail contact met ons op om het product binnen 30 dagen te retourneren.',
+                'ship_p7': 'Alle verzendkosten voor retournering zijn voor rekening van de klant.',
+                'ship_p8': 'Het bedrijf is niet verantwoordelijk voor verloren retourzendingen.',
+                'ship_title3': 'Annulering van de bestelling',
+                'ship_p9': 'De klant heeft het recht om de bestelling binnen 12 uur te annuleren.'
+            }
+        };
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const userLang = navigator.language || navigator.userLanguage;
+            const langCode = userLang.split('-')[0].toLowerCase();
+
+            const supportedLangs = ['de', 'fr', 'nl'];
+            if (supportedLangs.includes(langCode)) {
+                const trans = translations[langCode];
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (trans[key]) {
+                        el.innerHTML = trans[key]; 
+                    }
+                });
+                document.documentElement.lang = langCode;
+            }
+        });
+
+        // ==========================================
+        // Carousel Configuration
+        // ==========================================
         const images = [
             'images/wavemax1 (1).jpg',
             'images/wavemax1 (2).jpg',
@@ -598,7 +801,7 @@
         
         let currentIndex = 0;
         let slideInterval;
-        const autoSlideDelay = 3500; // 3.5 segundos
+        const autoSlideDelay = 3500;
 
         const mainImageEl = document.getElementById('main-carousel-image');
 
@@ -640,7 +843,9 @@
 
         startInterval();
 
-        // Lóxica para os modais (Popups)
+        // ==========================================
+        // Modal Logic
+        // ==========================================
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
             if (modal) {
